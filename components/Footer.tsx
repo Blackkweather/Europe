@@ -76,7 +76,7 @@ export function Footer() {
         >
           <motion.div className="space-y-4" variants={reducedMotion ? undefined : colVariants} transition={t}>
             <Link href="/" className="inline-block hover:opacity-90 transition-opacity">
-              <Image src="/logo.png" alt="European Era" width={160} height={42} className="h-10 w-auto object-contain" />
+              <Image src="/logo.png" alt="European Era" width={220} height={58} className="h-14 w-auto object-contain" />
             </Link>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
               The New Era In International Mobility. Erasmus+ mobilities and teacher training in Málaga.

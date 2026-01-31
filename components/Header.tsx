@@ -34,7 +34,7 @@ export function Header({ transparent = false }: HeaderProps) {
     <header className={headerClass} role="banner" aria-label="Main navigation">
       <nav className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="shrink-0 flex items-center hover:opacity-90 transition-opacity" aria-label="European Era – home">
-          <Image src="/logo.png" alt="European Era" width={180} height={48} className="h-10 w-auto object-contain" priority />
+          <Image src="/logo.png" alt="European Era" width={260} height={70} className="h-[4rem] sm:h-[4.5rem] w-auto object-contain" priority />
         </Link>
 
         <ul className="hidden md:flex items-center gap-0.5 lg:gap-1 flex-wrap justify-end shrink min-w-0" role="menubar">
@@ -69,11 +69,7 @@ export function Header({ transparent = false }: HeaderProps) {
             <li role="none">
               <Link
                 href="/login"
-                className={`inline-flex items-center justify-center gap-1.5 rounded-none px-4 py-2.5 text-sm font-semibold min-h-[44px] min-w-[100px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-                  transparent
-                    ? "bg-white text-[var(--color-primary-dark)] hover:bg-white/90 focus-visible:ring-white/50"
-                    : "bg-primary text-white hover:brightness-105 focus-visible:ring-primary"
-                }`}
+                className="inline-flex items-center justify-center gap-1.5 rounded-none px-4 py-2.5 text-sm font-semibold min-h-[44px] min-w-[100px] bg-[var(--color-accent)] text-[var(--color-primary-dark)] hover:bg-[var(--color-accent)]/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-accent)] transition-colors"
                 role="menuitem"
               >
                 <LogIn size={16} aria-hidden />
@@ -141,7 +137,7 @@ export function Header({ transparent = false }: HeaderProps) {
                 </>
               ) : (
                 <li role="none">
-                  <Link href="/login" className={`block py-3 min-h-[44px] flex items-center gap-2 font-semibold text-sm ${transparent ? "text-white" : "text-primary"}`} role="menuitem" onClick={() => setOpen(false)}>
+                  <Link href="/login" className="block py-3 min-h-[44px] flex items-center gap-2 font-semibold text-sm text-[var(--color-accent)] hover:text-[var(--color-accent)]/90" role="menuitem" onClick={() => setOpen(false)}>
                     <LogIn size={16} aria-hidden />
                     Log in
                   </Link>
