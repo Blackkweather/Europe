@@ -27,7 +27,7 @@ export function About() {
             </h2>
             <div className="space-y-6 text-neutral-700 text-body-lg leading-relaxed">
               <p>
-                We're a passionate, international, and innovative team dedicated to
+                We&apos;re a passionate, international, and innovative team dedicated to
                 making a real difference. We specialise in arranging student
                 internships and teacher training courses in Málaga, Spain, managing
                 every detail from accommodation and transport to tailored placements
@@ -42,7 +42,7 @@ export function About() {
                 group, with every detail thoughtfully managed.
               </p>
               <p>
-                With us, you'll find not just a professional partner, but a friendly,
+                With us, you&apos;ll find not just a professional partner, but a friendly,
                 energetic team eager to support your success and make every
                 interaction enjoyable.
               </p>

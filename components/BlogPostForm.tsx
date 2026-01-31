@@ -231,6 +231,7 @@ export function BlogPostForm({
           {imageUrl && (
             <div className="mt-2">
               <p className="text-xs text-white/60 mb-1">Preview:</p>
+              {/* eslint-disable-next-line @next/next/no-img-element -- dynamic URL preview, not known at build time */}
               <img
                 src={imageUrl}
                 alt=""
