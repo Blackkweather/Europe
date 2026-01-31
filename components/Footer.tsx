@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { Phone, Mail, MessageCircle } from "lucide-react";
@@ -74,8 +75,8 @@ export function Footer() {
           animate={show ? "animate" : "initial"}
         >
           <motion.div className="space-y-4" variants={reducedMotion ? undefined : colVariants} transition={t}>
-            <Link href="/" className="font-heading font-bold text-xl tracking-tight text-white hover:text-white/90 transition-colors">
-              European Era<span className="text-white/50">.</span>
+            <Link href="/" className="inline-block hover:opacity-90 transition-opacity">
+              <Image src="/logo.png" alt="European Era" width={160} height={42} className="h-10 w-auto object-contain" />
             </Link>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
               The New Era In International Mobility. Erasmus+ mobilities and teacher training in Málaga.

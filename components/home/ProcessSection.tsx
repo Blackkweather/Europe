@@ -67,7 +67,7 @@ export function ProcessSection() {
 
                 {/* Cube on the center line only */}
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-20 h-20 flex shrink-0 items-center justify-center pointer-events-none md:pointer-events-auto">
-                  <div className="w-20 h-20 border-2 border-white/40 flex items-center justify-center bg-[#0a1628] hover:border-[var(--color-accent)] transition-all duration-300">
+                  <div className="w-20 h-20 border-2 border-white/40 flex items-center justify-center bg-[var(--color-primary-dark)] hover:border-[var(--color-accent)] transition-all duration-300">
                     <span className="text-xl font-bold text-white">{step.number}</span>
                   </div>
                 </div>

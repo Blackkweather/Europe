@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useSession, signOut } from "next-auth/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, LogIn, LayoutDashboard, LogOut } from "lucide-react";
@@ -27,16 +28,13 @@ export function Header({ transparent = false }: HeaderProps) {
   const linkClass = transparent
     ? "text-white/80 hover:text-white font-medium text-sm tracking-wide transition-colors px-4 py-2.5 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-none"
     : "text-neutral-600 hover:text-primary font-medium text-sm tracking-wide transition-colors px-4 py-2.5 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-none";
-  const logoClass = transparent
-    ? "font-heading text-xl font-semibold text-white hover:text-white/90 transition-opacity"
-    : "font-heading text-xl font-semibold text-primary hover:opacity-90 transition-opacity";
   const mobileBg = transparent ? "bg-[var(--color-primary-dark)] border-white/10" : "bg-white border-neutral-100";
 
   return (
     <header className={headerClass} role="banner" aria-label="Main navigation">
       <nav className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className={`shrink-0 ${logoClass}`} aria-label="European Era – home">
-          European Era
+        <Link href="/" className="shrink-0 flex items-center hover:opacity-90 transition-opacity" aria-label="European Era – home">
+          <Image src="/logo.png" alt="European Era" width={180} height={48} className="h-10 w-auto object-contain" priority />
         </Link>
 
         <ul className="hidden md:flex items-center gap-0.5 lg:gap-1 flex-wrap justify-end shrink min-w-0" role="menubar">

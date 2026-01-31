@@ -24,7 +24,7 @@ export function FeaturesSection() {
     <section
       id="services"
       className="py-16 sm:py-24 relative overflow-hidden"
-      style={{ background: "linear-gradient(180deg, var(--color-primary-dark) 0%, #0a1628 100%)" }}
+      style={{ background: "linear-gradient(180deg, var(--color-primary-dark) 0%, #1a2150 100%)" }}
     >
       <div className="container mx-auto max-w-6xl px-4 md:px-8 relative z-10">
         <SectionHeader

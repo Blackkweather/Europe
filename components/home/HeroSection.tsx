@@ -13,7 +13,7 @@ export function HeroSection() {
         <div
           className="absolute inset-0 opacity-40"
           style={{
-            background: "radial-gradient(circle at center, rgb(30 58 95 / 0.4) 0%, var(--color-primary-dark) 100%)",
+            background: "radial-gradient(circle at center, rgb(60 72 149 / 0.4) 0%, var(--color-primary-dark) 100%)",
           }}
         />
       </div>
