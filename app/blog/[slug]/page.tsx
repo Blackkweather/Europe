@@ -36,21 +36,21 @@ function formatDate(dateStr: string) {
 function PostContent({ content }: { content: string }) {
   const paragraphs = content.trim().split("\n\n");
   return (
-    <div className="prose prose-neutral max-w-none prose-headings:font-heading prose-headings:font-semibold prose-headings:text-neutral-900 prose-headings:tracking-[0.02em] prose-p:text-neutral-700 prose-p:leading-relaxed prose-strong:text-primary">
+    <div className="prose prose-invert max-w-none prose-headings:font-heading prose-headings:font-semibold prose-headings:text-white prose-headings:tracking-[0.02em] prose-p:text-white/90 prose-p:leading-relaxed prose-strong:text-[var(--color-accent)]">
       {paragraphs.map((block, i) => {
         if (block.startsWith("## ")) {
           return (
-            <h2 key={i} className="font-heading text-headline mt-10 mb-4 tracking-[0.02em]">
+            <h2 key={i} className="font-heading text-headline mt-10 mb-4 text-white tracking-[0.02em]">
               {block.slice(3)}
             </h2>
           );
         }
         const parts = block.split(/(\*\*[^*]+\*\*)/g).filter(Boolean);
         return (
-          <p key={i} className="mb-6 text-body-lg leading-relaxed">
+          <p key={i} className="mb-6 text-body-lg text-white/90 leading-relaxed">
             {parts.map((part, j) => {
               if (part.startsWith("**") && part.endsWith("**")) {
-                return <strong key={j}>{part.slice(2, -2)}</strong>;
+                return <strong key={j} className="text-[var(--color-accent)]">{part.slice(2, -2)}</strong>;
               }
               return part;
             })}
@@ -74,22 +74,22 @@ export default async function BlogPostPage({ params }: Props) {
         breadcrumbs={[{ label: "Blog", href: "/blog" }, { label: post.title }]}
         variant="default"
       />
-      <section className="py-section sm:py-section-lg bg-white">
+      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
         <SectionContainer narrow>
-          <div className="flex flex-wrap items-center gap-4 text-sm text-neutral-500 mb-10">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-white/60 mb-10">
             <time dateTime={post.date} className="flex items-center gap-1.5">
               <Calendar size={16} aria-hidden="true" />
               {formatDate(post.date)}
             </time>
             {post.author && <span>{post.author}</span>}
             {post.category && (
-              <span className="border border-primary/20 px-3 py-0.5 text-primary font-medium text-sm">
+              <span className="border border-white/20 px-3 py-0.5 text-[var(--color-accent)] font-medium text-sm">
                 {post.category}
               </span>
             )}
           </div>
           {post.image && (
-            <div className="relative aspect-video overflow-hidden mb-12 border border-neutral-200 bg-neutral-100">
+            <div className="relative aspect-video overflow-hidden mb-12 border border-white/10 bg-white/5">
               <Image
                 src={post.image}
                 alt=""
@@ -101,10 +101,10 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           )}
           <PostContent content={post.content} />
-          <p className="mt-12 pt-8 border-t border-neutral-200">
+          <p className="mt-12 pt-8 border-t border-white/10">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-primary font-medium hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-none transition-colors"
+              className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-none"
             >
               <ArrowLeft size={18} aria-hidden="true" />
               Back to Blog

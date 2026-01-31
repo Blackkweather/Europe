@@ -20,19 +20,19 @@ export default async function DashboardPage() {
         breadcrumbs={[{ label: "Dashboard" }]}
         variant="default"
       />
-      <section className="py-section sm:py-section-lg bg-stone-50/80">
+      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
         <SectionContainer narrow>
-          <div className="border border-neutral-200 bg-white p-10">
+          <div className="border border-white/10 bg-white/5 p-10">
             <div className="flex items-center gap-4 mb-8">
-              <span className="flex h-12 w-12 items-center justify-center border border-primary/20 text-primary">
+              <span className="flex h-12 w-12 items-center justify-center border border-white/20 text-[var(--color-accent)]">
                 <LayoutDashboard size={24} aria-hidden />
               </span>
               <div>
-                <h2 className="font-heading text-headline font-semibold text-neutral-900 tracking-[0.02em]">Your account</h2>
-                <p className="text-sm text-neutral-600">{session.user.email}</p>
+                <h2 className="font-heading text-headline font-semibold text-white tracking-[0.02em]">Your account</h2>
+                <p className="text-sm text-white/70">{session.user.email}</p>
               </div>
             </div>
-            <p className="text-neutral-600 text-body-lg mb-6">
+            <p className="text-white/90 text-body-lg mb-6">
               You are logged in. Manage blog posts and platform content from here.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -45,7 +45,7 @@ export default async function DashboardPage() {
               </Link>
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 border border-neutral-300 px-6 py-3 min-h-[48px] font-medium text-neutral-700 hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-none transition-colors"
+                className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 min-h-[48px] font-medium text-white/90 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-none transition-colors"
               >
                 Back to home
                 <ArrowRight size={18} aria-hidden />

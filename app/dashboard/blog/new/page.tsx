@@ -46,16 +46,16 @@ export default function DashboardBlogNewPage() {
         ]}
         variant="default"
       />
-      <section className="py-section sm:py-section-lg bg-stone-50/80">
+      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
         <SectionContainer>
           <Link
             href="/dashboard/blog"
-            className="inline-flex items-center gap-2 text-neutral-600 hover:text-primary font-medium mb-8 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-none"
+            className="inline-flex items-center gap-2 text-white/70 hover:text-[var(--color-accent)] font-medium mb-8 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-none"
           >
             <ArrowLeft size={18} aria-hidden />
             Back to Blog
           </Link>
-          <div className="border border-neutral-200 bg-white p-8 sm:p-10">
+          <div className="border border-white/10 bg-white/5 p-8 sm:p-10">
             <BlogPostForm
               defaultValues={{
                 title: "",

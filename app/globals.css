@@ -185,3 +185,21 @@
 .section-cta-animated {
   background: #0f172a;
 }
+
+/* v3: dark scrollbar on home */
+html.scrollbar-dark {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) var(--color-primary-dark);
+}
+html.scrollbar-dark::-webkit-scrollbar {
+  width: 6px;
+}
+html.scrollbar-dark::-webkit-scrollbar-track {
+  background: var(--color-primary-dark);
+}
+html.scrollbar-dark::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+html.scrollbar-dark::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}

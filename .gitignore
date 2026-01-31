@@ -31,6 +31,9 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
+# Reference / template (not part of app)
+_template_ref/
+
 # Vercel
 .vercel
 

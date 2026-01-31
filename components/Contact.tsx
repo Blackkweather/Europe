@@ -42,14 +42,14 @@ export function Contact({ showHeading = true }: ContactProps) {
   return (
     <section
       id="contact"
-      className="py-section sm:py-section-lg bg-stone-50/80"
+      className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]"
       aria-labelledby={showHeading ? "contact-heading" : undefined}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {showHeading && (
           <motion.h2
             id="contact-heading"
-            className="font-heading text-display font-semibold text-neutral-900 mb-16 text-center tracking-[0.02em] leading-tight"
+            className="font-heading text-display font-semibold text-white mb-16 text-center tracking-[0.02em] leading-tight"
             initial={reducedMotion ? false : { opacity: 0, y: 8 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -66,16 +66,16 @@ export function Contact({ showHeading = true }: ContactProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.22, 0.61, 0.36, 1] }}
         >
-          <div className="border border-neutral-200 bg-white p-10">
+          <div className="border border-white/10 bg-white/5 p-10">
             <h3 className="sr-only">Contact information</h3>
             <ul className="space-y-5" role="list">
               <li>
                 <a
                   href={phoneHref}
-                  className="flex items-center gap-4 min-h-[56px] text-neutral-700 hover:text-primary hover:bg-primary/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 p-3 -m-3 transition-colors duration-200"
+                  className="flex items-center gap-4 min-h-[56px] text-white/90 hover:text-[var(--color-accent)] hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white p-3 -m-3 transition-colors duration-200"
                   aria-label={`Call us: ${phoneDisplay}`}
                 >
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-primary/20 text-primary" aria-hidden="true">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-white/20 text-[var(--color-accent)]" aria-hidden="true">
                     <Phone size={24} />
                   </span>
                   <span className="text-body-lg font-medium">{phoneDisplay}</span>
@@ -84,10 +84,10 @@ export function Contact({ showHeading = true }: ContactProps) {
               <li>
                 <a
                   href={`mailto:${email}`}
-                  className="flex items-center gap-4 min-h-[56px] text-neutral-700 hover:text-primary hover:bg-primary/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 p-3 -m-3 transition-colors duration-200"
+                  className="flex items-center gap-4 min-h-[56px] text-white/90 hover:text-[var(--color-accent)] hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white p-3 -m-3 transition-colors duration-200"
                   aria-label={`Email us: ${email}`}
                 >
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-primary/20 text-primary" aria-hidden="true">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-white/20 text-[var(--color-accent)]" aria-hidden="true">
                     <Mail size={24} />
                   </span>
                   <span className="text-body-lg font-medium break-all">{email}</span>
@@ -98,10 +98,10 @@ export function Contact({ showHeading = true }: ContactProps) {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 min-h-[56px] text-neutral-700 hover:text-primary hover:bg-primary/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 p-3 -m-3 transition-colors duration-200"
+                  className="flex items-center gap-4 min-h-[56px] text-white/90 hover:text-[var(--color-accent)] hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white p-3 -m-3 transition-colors duration-200"
                   aria-label="Chat on WhatsApp"
                 >
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-primary/20 text-primary" aria-hidden="true">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-white/20 text-[var(--color-accent)]" aria-hidden="true">
                     <MessageCircle size={24} />
                   </span>
                   <span className="text-body-lg font-medium">Chat on WhatsApp</span>
@@ -111,7 +111,7 @@ export function Contact({ showHeading = true }: ContactProps) {
           </div>
 
           <motion.div
-            className="border border-neutral-200 bg-white p-10"
+            className="border border-white/10 bg-white/5 p-10"
             initial={reducedMotion ? false : { opacity: 0, y: 8 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -134,20 +134,20 @@ export function Contact({ showHeading = true }: ContactProps) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.1 + i * 0.05 }}
                 >
-                  <label htmlFor={id} className="block text-sm font-medium text-neutral-700 mb-2">
+                  <label htmlFor={id} className="block text-sm font-medium text-white/80 mb-2">
                     {label}
                   </label>
                   <input
                     id={id}
                     type={type}
                     {...register(reg as "name" | "email")}
-                    className="w-full border border-neutral-300 px-4 py-3 text-neutral-900 focus:border-primary focus:ring-2 focus:ring-primary/15 focus:outline-none transition-colors duration-200 min-h-[48px]"
+                    className="w-full border border-white/20 bg-white/5 px-4 py-3 text-white placeholder:text-white/50 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 focus:outline-none transition-colors duration-200 min-h-[48px]"
                     autoComplete={auto}
                     aria-invalid={!!err}
                     aria-describedby={err ? `${id}-error` : undefined}
                   />
                   {err && (
-                    <p id={`${id}-error`} className="mt-1.5 text-sm text-accent" role="alert">
+                    <p id={`${id}-error`} className="mt-1.5 text-sm text-[var(--color-accent)]" role="alert">
                       {err.message}
                     </p>
                   )}
@@ -159,19 +159,19 @@ export function Contact({ showHeading = true }: ContactProps) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.2 }}
               >
-                <label htmlFor="contact-message" className="block text-sm font-medium text-neutral-700 mb-2">
+                <label htmlFor="contact-message" className="block text-sm font-medium text-white/80 mb-2">
                   Message
                 </label>
                 <textarea
                   id="contact-message"
                   rows={4}
                   {...register("message")}
-                  className="w-full border border-neutral-300 px-4 py-3 text-neutral-900 focus:border-primary focus:ring-2 focus:ring-primary/15 focus:outline-none transition-colors duration-200 resize-y min-h-[120px]"
+                  className="w-full border border-white/20 bg-white/5 px-4 py-3 text-white placeholder:text-white/50 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 focus:outline-none transition-colors duration-200 resize-y min-h-[120px]"
                   aria-invalid={!!errors.message}
                   aria-describedby={errors.message ? "message-error" : undefined}
                 />
                 {errors.message && (
-                  <p id="message-error" className="mt-1.5 text-sm text-accent" role="alert">
+                  <p id="message-error" className="mt-1.5 text-sm text-[var(--color-accent)]" role="alert">
                     {errors.message.message}
                   </p>
                 )}
@@ -179,7 +179,7 @@ export function Contact({ showHeading = true }: ContactProps) {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary px-4 py-3 min-h-[48px] font-semibold text-white transition-[filter] duration-200 hover:brightness-105 active:brightness-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:opacity-60"
+                className="w-full bg-[var(--color-primary)] px-4 py-3 min-h-[48px] font-semibold text-white transition-[filter] duration-200 hover:brightness-105 active:brightness-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-primary-dark)] disabled:opacity-60"
                 initial={reducedMotion ? false : { opacity: 0, y: 4 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

@@ -59,12 +59,12 @@ export default function DashboardBlogPage() {
         breadcrumbs={[{ label: "Dashboard", href: "/dashboard" }, { label: "Blog" }]}
         variant="default"
       />
-      <section className="py-section sm:py-section-lg bg-stone-50/80">
+      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
         <SectionContainer>
           <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
             <Link
               href="/dashboard"
-              className="inline-flex items-center gap-2 text-neutral-600 hover:text-primary font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-none"
+              className="inline-flex items-center gap-2 text-white/70 hover:text-[var(--color-accent)] font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-none"
             >
               <ArrowLeft size={18} aria-hidden />
               Back to Dashboard
@@ -79,13 +79,13 @@ export default function DashboardBlogPage() {
           </div>
 
           {loading ? (
-            <p className="text-neutral-500">Loading posts…</p>
+            <p className="text-white/60">Loading posts…</p>
           ) : posts.length === 0 ? (
-            <div className="border border-neutral-200 bg-white p-12 text-center">
-              <span className="inline-flex h-14 w-14 items-center justify-center border border-primary/20 text-primary mb-4" aria-hidden>
+            <div className="border border-white/10 bg-white/5 p-12 text-center">
+              <span className="inline-flex h-14 w-14 items-center justify-center border border-white/20 text-[var(--color-accent)] mb-4" aria-hidden>
                 <FileText size={28} />
               </span>
-              <p className="text-neutral-600 mb-4">No blog posts yet.</p>
+              <p className="text-white/90 mb-4">No blog posts yet.</p>
               <Link href="/dashboard/blog/new" className="btn-primary inline-flex items-center gap-2">
                 <Plus size={18} aria-hidden />
                 Create your first post
@@ -96,13 +96,13 @@ export default function DashboardBlogPage() {
               {posts.map((post) => (
                 <li
                   key={post.slug}
-                  className="border border-neutral-200 bg-white p-6 flex flex-wrap items-center justify-between gap-4"
+                  className="border border-white/10 bg-white/5 p-6 flex flex-wrap items-center justify-between gap-4"
                 >
                   <div className="min-w-0 flex-1">
-                    <h2 className="font-heading text-headline font-semibold text-neutral-900 tracking-[0.02em] truncate">
+                    <h2 className="font-heading text-headline font-semibold text-white tracking-[0.02em] truncate">
                       {post.title}
                     </h2>
-                    <p className="text-sm text-neutral-500 mt-1">
+                    <p className="text-sm text-white/60 mt-1">
                       {formatDate(post.date)} · {post.author}
                       {post.category && ` · ${post.category}`}
                     </p>
@@ -110,7 +110,7 @@ export default function DashboardBlogPage() {
                   <div className="flex items-center gap-2 shrink-0">
                     <Link
                       href={`/dashboard/blog/${encodeURIComponent(post.slug)}/edit`}
-                      className="inline-flex items-center gap-2 border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-colors"
+                      className="inline-flex items-center gap-2 border border-white/20 px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white transition-colors"
                     >
                       <PenLine size={16} aria-hidden />
                       Edit
@@ -119,7 +119,7 @@ export default function DashboardBlogPage() {
                       href={`/blog/${post.slug}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-colors"
+                      className="inline-flex items-center gap-2 border border-white/20 px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white transition-colors"
                     >
                       View
                     </a>
@@ -127,7 +127,7 @@ export default function DashboardBlogPage() {
                       type="button"
                       onClick={() => handleDelete(post.slug)}
                       disabled={deleting === post.slug}
-                      className="inline-flex items-center gap-2 border border-red-200 px-4 py-2 text-sm font-medium text-red-700 hover:bg-red-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 disabled:opacity-50 transition-colors"
+                      className="inline-flex items-center gap-2 border border-red-400/50 px-4 py-2 text-sm font-medium text-red-300 hover:bg-red-500/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 disabled:opacity-50 transition-colors"
                       aria-label={`Delete ${post.title}`}
                     >
                       <Trash2 size={16} aria-hidden />

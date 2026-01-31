@@ -23,15 +23,10 @@ export function PageHeader({
   variant = "default",
 }: PageHeaderProps) {
   const isCentered = variant === "centered" || variant === "hero";
-  const isHero = variant === "hero";
   const reducedMotion = useReducedMotion();
   return (
     <header
-      className={
-        isHero
-          ? "relative overflow-hidden bg-primary-dark text-white py-20 sm:py-28"
-          : "border-b border-neutral-200 bg-stone-50/80 py-16 sm:py-20"
-      }
+      className="relative overflow-hidden bg-[var(--color-primary-dark)] text-white border-b border-white/10 py-16 sm:py-20"
       aria-labelledby="page-title"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -47,42 +42,23 @@ export function PageHeader({
               <li>
                 <Link
                   href="/"
-                  className={
-                    isHero
-                      ? "text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-none transition-colors"
-                      : "text-neutral-500 hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-none transition-colors"
-                  }
+                  className="text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-none transition-colors"
                 >
                   Home
                 </Link>
               </li>
               {breadcrumbs.map((item, i) => (
                 <li key={i} className="flex items-center gap-1.5">
-                  <ChevronRight
-                    size={16}
-                    className={
-                      isHero ? "text-white/60 shrink-0" : "text-neutral-400 shrink-0"
-                    }
-                    aria-hidden
-                  />
+                  <ChevronRight size={16} className="text-white/60 shrink-0" aria-hidden />
                   {item.href ? (
                     <Link
                       href={item.href}
-                      className={
-                        isHero
-                          ? "text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-none transition-colors"
-                          : "text-neutral-500 hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-none transition-colors"
-                      }
+                      className="text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-none transition-colors"
                     >
                       {item.label}
                     </Link>
                   ) : (
-                    <span
-                      className={
-                        isHero ? "text-white font-medium" : "text-neutral-700 font-medium"
-                      }
-                      aria-current="page"
-                    >
+                    <span className="text-white font-medium" aria-current="page">
                       {item.label}
                     </span>
                   )}
@@ -99,29 +75,19 @@ export function PageHeader({
         >
           <h1
             id="page-title"
-            className={
-              isHero
-                ? "font-heading text-display font-semibold tracking-[0.02em] leading-tight"
-                : "font-heading text-display font-semibold text-neutral-900 tracking-[0.02em] leading-tight"
-            }
+            className="font-heading text-display font-semibold text-white tracking-[0.02em] leading-tight"
           >
             {title}
           </h1>
           <motion.span
-            className={isHero ? "mt-6 block h-px w-16 mx-auto bg-white/30" : "mt-4 block h-px w-14 bg-primary/20"}
+            className={isCentered ? "mt-6 block h-px w-16 mx-auto bg-white/30" : "mt-4 block h-px w-14 bg-white/30"}
             initial={reducedMotion ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             aria-hidden
           />
           {description && (
-            <p
-              className={
-                isHero
-                  ? "mt-6 text-body-lg text-white/90 leading-relaxed max-w-content mx-auto"
-                  : "mt-4 text-body-lg text-neutral-600 leading-relaxed max-w-content"
-              }
-            >
+            <p className={`mt-4 text-body-lg text-white/90 leading-relaxed max-w-content ${isCentered ? "mx-auto" : ""}`}>
               {description}
             </p>
           )}

@@ -5,8 +5,8 @@
 const BASE = "https://europeanera.eu/wp-content/uploads/2026/01";
 
 export const images = {
-  /** Hero / Erasmus Málaga – main banner */
-  hero: `${BASE}/Erasmus-Malaga.jpg`,
+  /** Hero – internships / Málaga (different from student mobility image) */
+  hero: `${BASE}/Internships-Malaga.jpg`,
   /** Student mobility section */
   studentMobility: `${BASE}/Erasmus-Malaga.jpg`,
   /** Staff mobility / internships */

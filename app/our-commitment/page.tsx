@@ -41,25 +41,25 @@ export default function OurCommitmentPage() {
         breadcrumbs={[{ label: "Our Commitment" }]}
         variant="hero"
       />
-      <section className="py-section sm:py-section-lg bg-stone-50/80">
+      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
         <SectionContainer>
           {/* Interest hook: three pillars */}
           <div className="grid gap-8 sm:grid-cols-3 mb-20 sm:mb-24">
             {pillars.map(({ icon: Icon, title, line }) => (
               <div
                 key={title}
-                className="text-center border border-neutral-200 bg-white p-8 transition-colors duration-200 hover:border-neutral-300"
+                className="text-center border border-white/10 bg-white/5 p-8 transition-colors duration-200 hover:border-white/20"
               >
                 <span
-                  className="inline-flex h-14 w-14 items-center justify-center border border-primary/20 text-primary mb-6"
+                  className="inline-flex h-14 w-14 items-center justify-center border border-white/20 text-[var(--color-accent)] mb-6"
                   aria-hidden="true"
                 >
                   <Icon size={28} strokeWidth={1.75} />
                 </span>
-                <h2 className="font-heading text-headline font-semibold text-primary mb-3 tracking-[0.02em]">
+                <h2 className="font-heading text-headline font-semibold text-[var(--color-accent)] mb-3 tracking-[0.02em]">
                   {title}
                 </h2>
-                <p className="text-body-sm text-neutral-600 leading-relaxed max-w-[20ch] mx-auto">
+                <p className="text-body-sm text-white/80 leading-relaxed max-w-[20ch] mx-auto">
                   {line}
                 </p>
               </div>
@@ -69,17 +69,17 @@ export default function OurCommitmentPage() {
           {/* Main message – unchanged copy */}
           <div className="max-w-2xl mx-auto text-center space-y-10">
             <span
-              className="inline-flex h-14 w-14 items-center justify-center border border-primary/20 text-primary"
+              className="inline-flex h-14 w-14 items-center justify-center border border-white/20 text-[var(--color-accent)]"
               aria-hidden="true"
             >
               <Target size={32} strokeWidth={1.75} />
             </span>
-            <p className="text-body-lg text-neutral-700 leading-relaxed max-w-content mx-auto">
+            <p className="text-body-lg text-white/90 leading-relaxed max-w-content mx-auto">
               We are committed to empowering personal growth and promoting{" "}
-              <strong>inclusivity and sustainability</strong> through exceptional
+              <strong className="text-white">inclusivity and sustainability</strong> through exceptional
               Erasmus+ student and staff mobility management. Proud of our high rate
               of repeat educational centres, we provide comprehensive support for{" "}
-              <strong>Erasmus+</strong> applications, ensuring a seamless and
+              <strong className="text-white">Erasmus+</strong> applications, ensuring a seamless and
               effective process.
             </p>
             <div>

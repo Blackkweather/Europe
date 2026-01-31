@@ -25,10 +25,10 @@ export default function AboutPage() {
         breadcrumbs={[{ label: "About Us" }]}
         variant="hero"
       />
-      <section className="py-section sm:py-section-lg bg-white">
+      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
         <SectionContainer className="grid gap-16 lg:grid-cols-5 lg:gap-20 lg:items-center">
           <div className="lg:col-span-3 order-2 lg:order-1 space-y-8">
-            <div className="space-y-8 text-neutral-700 text-body-lg leading-relaxed max-w-content">
+            <div className="space-y-8 text-white/90 text-body-lg leading-relaxed max-w-content">
               <p>
                 We're a passionate, international, and innovative team dedicated to
                 making a real difference. We specialise in arranging student
@@ -55,13 +55,13 @@ export default function AboutPage() {
                 href={brochureUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center font-medium text-primary hover:text-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-none transition-colors"
+                className="inline-flex items-center font-medium text-[var(--color-accent)] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-none transition-colors"
               >
                 Download the brochure (PDF)
               </a>
             </p>
           </div>
-          <div className="lg:col-span-2 order-1 lg:order-2 relative aspect-[4/3] overflow-hidden border border-neutral-200 bg-neutral-100">
+          <div className="lg:col-span-2 order-1 lg:order-2 relative aspect-[4/3] overflow-hidden border border-white/10 bg-white/5">
             <Image
               src="https://europeanera.eu/wp-content/uploads/2026/01/European-Era-Staff-1024x683-1.jpg"
               alt="European Era staff – education and mobility experts"

@@ -14,15 +14,16 @@ export default function AvisoLegal() {
       <PageHeader
         title="Aviso legal, política de privacidad y cookies"
         breadcrumbs={[{ label: "Aviso legal" }]}
+        variant="default"
       />
-      <section className="py-section sm:py-section-lg bg-white">
+      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
         <SectionContainer narrow>
-          <p className="text-neutral-600 mb-8 text-body-lg leading-relaxed">
+          <p className="text-white/90 mb-8 text-body-lg leading-relaxed">
             Esta página contendrá el aviso legal, la política de privacidad y la información sobre cookies de European Era. Contenido por añadir.
           </p>
           <Link
             href="/"
-            className="inline-flex items-center text-primary font-medium hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-none transition-colors"
+            className="inline-flex items-center text-[var(--color-accent)] font-medium hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-none"
           >
             ← Volver al inicio
           </Link>
