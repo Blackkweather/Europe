@@ -48,7 +48,7 @@ function LoginForm() {
   }
 
   return (
-<section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
+<section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer narrow>
         <div className="border border-white/10 bg-white/5 p-10 max-w-md mx-auto">
             {(error === "CredentialsSignin" || formError) && (

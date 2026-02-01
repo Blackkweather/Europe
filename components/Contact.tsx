@@ -4,12 +4,16 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion, useReducedMotion } from "framer-motion";
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 import {
   phoneDisplay,
   phoneHref,
   email,
   whatsappUrl,
+  address,
+  mapEmbedUrl,
+  mapCenter,
+  mapLink,
 } from "../lib/constants";
 
 const contactFormSchema = z.object({
@@ -42,7 +46,7 @@ export function Contact({ showHeading = true }: ContactProps) {
   return (
     <section
       id="contact"
-      className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]"
+      className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]"
       aria-labelledby={showHeading ? "contact-heading" : undefined}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -105,6 +109,20 @@ export function Contact({ showHeading = true }: ContactProps) {
                     <MessageCircle size={24} />
                   </span>
                   <span className="text-body-lg font-medium">Chat on WhatsApp</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={mapLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 min-h-[56px] text-white/90 hover:text-[var(--color-accent)] hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white p-3 -m-3 transition-colors duration-200"
+                  aria-label={`View our location: ${address}`}
+                >
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-white/20 text-[var(--color-accent)]" aria-hidden="true">
+                    <MapPin size={24} />
+                  </span>
+                  <span className="text-body-lg font-medium">{address}</span>
                 </a>
               </li>
             </ul>
@@ -189,6 +207,53 @@ export function Contact({ showHeading = true }: ContactProps) {
               </motion.button>
             </form>
           </motion.div>
+        </motion.div>
+
+        <motion.div
+          className="mt-16"
+          initial={reducedMotion ? false : { opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+            <MapPin className="h-5 w-5 text-[var(--color-accent)]" aria-hidden />
+            Where we are
+          </h3>
+          <div className="border border-white/10 overflow-hidden rounded-sm bg-white/5">
+            <div className="aspect-[16/10] min-h-[240px] w-full">
+              {mapEmbedUrl ? (
+                <iframe
+                  src={mapEmbedUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="European Era location map"
+                  className="w-full h-full min-h-[240px]"
+                />
+              ) : (
+                <iframe
+                  src={`https://www.openstreetmap.org/export/embed.html?bbox=${mapCenter[1] - 0.04}%2C${mapCenter[0] - 0.03}%2C${mapCenter[1] + 0.04}%2C${mapCenter[0] + 0.03}&layer=map&marker=${mapCenter[0]}%2C${mapCenter[1]}`}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  title="European Era location map"
+                  className="w-full h-full min-h-[240px]"
+                />
+              )}
+            </div>
+          </div>
+          <p className="mt-3 text-sm text-white/70">
+            <a href={mapLink} target="_blank" rel="noopener noreferrer" className="text-[var(--color-accent)] hover:underline">
+              Open in Google Maps
+            </a>
+            {" · "}
+            {address}
+          </p>
         </motion.div>
       </div>
     </section>

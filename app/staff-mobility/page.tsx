@@ -38,7 +38,7 @@ export default function StaffMobilityPage() {
         breadcrumbs={[{ label: "Our Services", href: "/" }, { label: staffMobility.title }]}
         variant="hero"
       />
-      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
+      <section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-start">
           <div className="flex-1 space-y-8">
             <span

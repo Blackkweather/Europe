@@ -23,18 +23,18 @@ export function Header({ transparent = false }: HeaderProps) {
   const { data: session, status } = useSession();
 
   const headerClass = transparent
-    ? "sticky top-0 z-50 w-full border-b border-white/10 bg-[var(--color-primary-dark)]/80 backdrop-blur-md text-white"
+    ? "sticky top-0 z-50 w-full border-b border-white/10 bg-[var(--color-bg-soft)]/90 backdrop-blur-md text-white"
     : "sticky top-0 z-50 w-full border-b border-neutral-200 bg-white text-neutral-900";
   const linkClass = transparent
     ? "text-white/80 hover:text-white font-medium text-sm tracking-wide transition-colors px-4 py-2.5 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-none"
     : "text-neutral-600 hover:text-primary font-medium text-sm tracking-wide transition-colors px-4 py-2.5 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-none";
-  const mobileBg = transparent ? "bg-[var(--color-primary-dark)] border-white/10" : "bg-white border-neutral-100";
+  const mobileBg = transparent ? "bg-[var(--color-bg-soft)] border-white/10" : "bg-white border-neutral-100";
 
   return (
     <header className={headerClass} role="banner" aria-label="Main navigation">
       <nav className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="shrink-0 flex items-center hover:opacity-90 transition-opacity" aria-label="European Era – home">
-          <Image src="/logo.png" alt="European Era" width={260} height={70} className="h-[4rem] sm:h-[4.5rem] w-auto object-contain" priority />
+          <Image src="/logo.png?v=2" alt="European Era" width={220} height={58} className="h-12 sm:h-14 w-auto object-contain" priority unoptimized />
         </Link>
 
         <ul className="hidden md:flex items-center gap-0.5 lg:gap-1 flex-wrap justify-end shrink min-w-0" role="menubar">

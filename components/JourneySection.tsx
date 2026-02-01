@@ -57,7 +57,7 @@ export function JourneySection() {
     <section
       ref={ref}
       id="journey"
-      className="relative py-32 md:py-40 overflow-hidden bg-[var(--color-primary-dark)]"
+      className="relative py-32 md:py-40 overflow-hidden bg-[var(--color-bg-soft)]"
       aria-labelledby="journey-heading"
     >
       <div className="absolute left-0 top-0 bottom-0 w-px bg-white/20" aria-hidden />
@@ -70,7 +70,7 @@ export function JourneySection() {
       <div className="container mx-auto max-w-6xl px-4 md:px-8 relative z-10">
         <motion.h2
           id="journey-heading"
-          className="text-sm font-semibold uppercase tracking-[0.25em] text-white/70 mb-4"
+          className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -98,7 +98,7 @@ export function JourneySection() {
               transition={{ duration: 0.6, delay: index * 0.08 }}
             >
               <div className="lg:col-span-4">
-                <span className="text-6xl md:text-7xl font-bold text-white/20 block mb-4">
+                <span className="text-6xl md:text-7xl font-bold text-[var(--color-accent)]/70 block mb-4">
                   {chapter.number}
                 </span>
                 <h3 className="text-2xl md:text-3xl font-bold text-white">
@@ -125,9 +125,17 @@ export function JourneySection() {
         </div>
       </div>
 
-      {/* Floating parallax shapes */}
-      <div className="absolute top-1/4 right-10 w-64 h-64 border border-white/5 rounded-full pointer-events-none" aria-hidden />
-      <div className="absolute bottom-1/3 left-10 w-40 h-40 border border-white/5 pointer-events-none" aria-hidden />
+      {/* Floating parallax shapes – light yellow borders */}
+      <div
+        className="absolute top-1/4 right-10 w-64 h-64 border-2 rounded-full pointer-events-none"
+        style={{ borderColor: "rgba(245, 208, 0, 0.5)" }}
+        aria-hidden
+      />
+      <div
+        className="absolute bottom-1/3 left-10 w-40 h-40 border-2 pointer-events-none"
+        style={{ borderColor: "rgba(245, 208, 0, 0.5)" }}
+        aria-hidden
+      />
     </section>
   );
 }

@@ -41,7 +41,7 @@ export default function OurCommitmentPage() {
         breadcrumbs={[{ label: "Our Commitment" }]}
         variant="hero"
       />
-      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
+      <section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer>
           {/* Interest hook: three pillars */}
           <div className="grid gap-8 sm:grid-cols-3 mb-20 sm:mb-24">

@@ -16,7 +16,7 @@ export default function AvisoLegal() {
         breadcrumbs={[{ label: "Aviso legal" }]}
         variant="default"
       />
-      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
+      <section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer narrow>
           <p className="text-white/90 mb-8 text-body-lg leading-relaxed">
             Esta página contendrá el aviso legal, la política de privacidad y la información sobre cookies de European Era. Contenido por añadir.

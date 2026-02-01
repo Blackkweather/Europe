@@ -74,7 +74,7 @@ export default async function BlogPostPage({ params }: Props) {
         breadcrumbs={[{ label: "Blog", href: "/blog" }, { label: post.title }]}
         variant="default"
       />
-      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
+      <section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer narrow>
           <div className="flex flex-wrap items-center gap-4 text-sm text-white/60 mb-10">
             <time dateTime={post.date} className="flex items-center gap-1.5">

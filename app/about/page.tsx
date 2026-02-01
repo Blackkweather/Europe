@@ -25,7 +25,7 @@ export default function AboutPage() {
         breadcrumbs={[{ label: "About Us" }]}
         variant="hero"
       />
-      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
+      <section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer className="grid gap-16 lg:grid-cols-5 lg:gap-20 lg:items-center">
           <div className="lg:col-span-3 order-2 lg:order-1 space-y-8">
             <div className="space-y-8 text-white/90 text-body-lg leading-relaxed max-w-content">

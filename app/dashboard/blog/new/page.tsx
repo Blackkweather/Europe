@@ -46,7 +46,7 @@ export default function DashboardBlogNewPage() {
         ]}
         variant="default"
       />
-      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
+      <section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer>
           <Link
             href="/dashboard/blog"

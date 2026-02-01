@@ -32,7 +32,7 @@ export function ProcessSection() {
         <div ref={ref} className="relative">
           {/* Vertical line down the middle */}
           <div
-            className="absolute top-0 bottom-0 w-[2px] bg-white/30 left-1/2 -translate-x-px"
+            className="absolute top-0 bottom-0 w-[2px] bg-[var(--color-accent)] left-1/2 -translate-x-px"
             aria-hidden
           />
 
@@ -67,7 +67,7 @@ export function ProcessSection() {
 
                 {/* Cube on the center line only */}
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-20 h-20 flex shrink-0 items-center justify-center pointer-events-none md:pointer-events-auto">
-                  <div className="w-20 h-20 border-2 border-white/40 flex items-center justify-center bg-[var(--color-primary-dark)] hover:border-[var(--color-accent)] transition-all duration-300">
+                  <div className="w-20 h-20 border-2 border-[var(--color-accent)] flex items-center justify-center bg-[var(--color-bg-soft)] hover:border-[var(--color-accent)]/90 transition-all duration-300">
                     <span className="text-xl font-bold text-white">{step.number}</span>
                   </div>
                 </div>
@@ -95,8 +95,8 @@ export function ProcessSection() {
           })}
         </div>
       </div>
-      <div className="absolute top-40 right-20 w-32 h-32 border border-white/10" aria-hidden />
-      <div className="absolute bottom-60 left-20 w-40 h-40 border border-white/5" aria-hidden />
+      <div className="absolute top-40 right-20 w-32 h-32 border border-[var(--color-accent)]/30" aria-hidden />
+      <div className="absolute bottom-60 left-20 w-40 h-40 border border-[var(--color-accent)]/20" aria-hidden />
     </section>
   );
 }

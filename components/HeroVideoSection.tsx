@@ -43,7 +43,7 @@ export function HeroVideoSection() {
               src={heroVideoUrl}
             />
             {!videoReady && (
-              <div className="absolute inset-0 bg-[var(--color-primary-dark)]">
+              <div className="absolute inset-0 bg-[var(--color-bg-soft)]">
                 <Image
                   src={images.hero}
                   alt=""
@@ -70,7 +70,7 @@ export function HeroVideoSection() {
           </div>
         )}
         <div
-          className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary-dark)]/60 via-[var(--color-primary-dark)]/40 to-[var(--color-primary-dark)]"
+          className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-soft)]/60 via-[var(--color-bg-soft)]/40 to-[var(--color-bg-soft)]"
           aria-hidden
         />
       </motion.div>
@@ -81,7 +81,7 @@ export function HeroVideoSection() {
         style={{ opacity }}
       >
         <motion.span
-          className="inline-block border border-white bg-transparent px-3 py-1 text-xs uppercase tracking-widest text-white mb-8"
+          className="inline-block border-2 border-[var(--color-accent)] text-[var(--color-accent)] bg-transparent px-3 py-1 text-xs uppercase tracking-widest mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -96,7 +96,7 @@ export function HeroVideoSection() {
         >
           The New Era
           <br />
-          <span className="text-white/80">In International</span>
+          <span className="text-[var(--color-accent)]">In International</span>
           <br />
           Mobility
         </motion.h1>

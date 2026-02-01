@@ -59,7 +59,7 @@ export default function DashboardBlogEditPage() {
     return (
       <>
         <PageHeader title="Edit post" breadcrumbs={[{ label: "Dashboard" }, { label: "Blog" }, { label: "Edit" }]} variant="default" />
-        <section className="py-section bg-[var(--color-primary-dark)]">
+        <section className="py-section bg-[var(--color-bg-soft)]">
           <SectionContainer>
             <p className="text-white/60">Loading…</p>
           </SectionContainer>
@@ -72,7 +72,7 @@ export default function DashboardBlogEditPage() {
     return (
       <>
         <PageHeader title="Not found" breadcrumbs={[{ label: "Dashboard" }, { label: "Blog" }]} variant="default" />
-        <section className="py-section bg-[var(--color-primary-dark)]">
+        <section className="py-section bg-[var(--color-bg-soft)]">
           <SectionContainer>
             <p className="text-white/90 mb-4">Post not found.</p>
             <Link href="/dashboard/blog" className="text-[var(--color-accent)] font-medium hover:text-white transition-colors">
@@ -107,7 +107,7 @@ export default function DashboardBlogEditPage() {
         ]}
         variant="default"
       />
-      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
+      <section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer>
           <Link
             href="/dashboard/blog"

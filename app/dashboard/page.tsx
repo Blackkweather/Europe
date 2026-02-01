@@ -20,7 +20,7 @@ export default async function DashboardPage() {
         breadcrumbs={[{ label: "Dashboard" }]}
         variant="default"
       />
-      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
+      <section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer narrow>
           <div className="border border-white/10 bg-white/5 p-10">
             <div className="flex items-center gap-4 mb-8">

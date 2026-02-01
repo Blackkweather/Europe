@@ -17,7 +17,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <section className="py-section-lg min-h-[60vh] flex items-center bg-[var(--color-primary-dark)]">
+    <section className="py-section-lg min-h-[60vh] flex items-center bg-[var(--color-bg-soft)]">
       <SectionContainer narrow className="text-center">
         <p className="font-heading text-5xl font-semibold text-white/20 tracking-[0.02em]">Error</p>
         <h1 className="mt-8 font-heading text-display font-semibold text-white tracking-[0.02em] leading-tight">

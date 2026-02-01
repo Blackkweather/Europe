@@ -35,7 +35,7 @@ export function CommitmentMouseSection() {
     <section
       ref={sectionRef}
       id="commitment"
-      className="relative py-32 md:py-40 overflow-hidden bg-[var(--color-primary-dark)]"
+      className="relative py-32 md:py-40 overflow-hidden bg-[var(--color-bg-soft)]"
       aria-labelledby="commitment-heading"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
@@ -53,8 +53,11 @@ export function CommitmentMouseSection() {
       </motion.div>
 
       <div className="container mx-auto max-w-4xl px-4 md:px-8 relative z-10 text-center">
+        <span className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-6">
+          What we stand for
+        </span>
         <motion.span
-          className="inline-flex h-12 w-12 items-center justify-center border border-white/20 text-white/80 mb-8"
+          className="inline-flex h-12 w-12 items-center justify-center border-2 border-[var(--color-accent)] text-[var(--color-accent)] mb-8"
           aria-hidden
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
@@ -63,7 +66,7 @@ export function CommitmentMouseSection() {
           </svg>
         </motion.span>
         <h2 id="commitment-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 tracking-tight">
-          Our Commitment
+          Our <span className="text-[var(--color-accent)]">Commitment</span>
         </h2>
         <p className="text-lg md:text-xl text-white/85 leading-relaxed max-w-3xl mx-auto">
           We are committed to empowering personal growth and promoting{" "}
@@ -81,8 +84,8 @@ export function CommitmentMouseSection() {
         </Link>
       </div>
 
-      <div className="absolute bottom-20 left-1/4 w-48 h-48 border border-white/5 pointer-events-none" aria-hidden />
-      <div className="absolute top-1/3 right-1/4 w-32 h-32 border border-white/5 rounded-full pointer-events-none" aria-hidden />
+      <div className="absolute bottom-20 left-1/4 w-48 h-48 border border-[var(--color-accent)]/50 pointer-events-none" aria-hidden />
+      <div className="absolute top-1/3 right-1/4 w-32 h-32 border border-[var(--color-accent)]/50 rounded-full pointer-events-none" aria-hidden />
     </section>
   );
 }

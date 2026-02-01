@@ -26,7 +26,7 @@ export function PageHeader({
   const reducedMotion = useReducedMotion();
   return (
     <header
-      className="relative overflow-hidden bg-[var(--color-primary-dark)] text-white border-b border-white/10 py-16 sm:py-20"
+      className="relative overflow-hidden bg-[var(--color-bg-soft)] text-white border-b border-white/10 py-16 sm:py-20"
       aria-labelledby="page-title"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

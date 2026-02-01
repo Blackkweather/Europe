@@ -148,11 +148,11 @@ export function ContactFloatingFormSection() {
           transition={{ duration: 0.6 }}
         >
           <div>
-            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-white/60 block mb-4">
+            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-4">
               Contact
             </span>
             <h2 id="contact-heading" className="text-4xl md:text-5xl font-bold tracking-tighter text-white mb-8">
-              Let&apos;s Work Together
+              Let&apos;s Work <span className="text-[var(--color-accent)]">Together</span>
             </h2>
             <p className="text-lg text-white/80 mb-12 max-w-md">
               Ready to start your mobility in Málaga? We&apos;ll support you from the first enquiry to the final evaluation.
@@ -164,7 +164,7 @@ export function ContactFloatingFormSection() {
                   className="flex items-center gap-4 hover:text-[var(--color-accent)] transition-colors"
                   aria-label={`Call: ${phoneDisplay}`}
                 >
-                  <Phone className="h-5 w-5 text-white/60" />
+                  <Phone className="h-5 w-5 text-[var(--color-accent)]/80 shrink-0" />
                   {phoneDisplay}
                 </a>
               </li>
@@ -174,15 +174,15 @@ export function ContactFloatingFormSection() {
                   className="flex items-center gap-4 hover:text-[var(--color-accent)] transition-colors break-all"
                   aria-label={`Email: ${email}`}
                 >
-                  <Mail className="h-5 w-5 text-white/60 shrink-0" />
+                  <Mail className="h-5 w-5 text-[var(--color-accent)]/80 shrink-0" />
                   {email}
                 </a>
               </li>
             </ul>
           </div>
 
-          <div className="border-2 border-white/20 bg-white/5 backdrop-blur-sm p-8 md:p-10">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-white/80 mb-8">
+          <div className="border-2 border-[var(--color-accent)]/30 bg-white/5 backdrop-blur-sm p-8 md:p-10">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-[var(--color-accent)]/90 mb-8">
               Send us a message
             </h3>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">

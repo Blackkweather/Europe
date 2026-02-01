@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
-      <body className="font-sans min-h-screen flex flex-col bg-[var(--color-primary-dark)]">
+      <body className="font-sans min-h-screen flex flex-col bg-[var(--color-bg-soft)]">
         <a href="#content" className="skip-link">
           Skip to content
         </a>

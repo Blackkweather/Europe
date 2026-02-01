@@ -32,7 +32,7 @@ export default function BlogPage() {
         breadcrumbs={[{ label: "Blog" }]}
         variant="centered"
       />
-      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
+      <section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer>
           <ul className="grid gap-10 md:grid-cols-2 lg:grid-cols-3" role="list">
             {posts.map((post) => (

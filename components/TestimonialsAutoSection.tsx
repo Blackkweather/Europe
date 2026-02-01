@@ -35,7 +35,7 @@ export function TestimonialsAutoSection() {
   return (
     <section
       id="testimonials"
-      className="relative py-32 md:py-40 overflow-hidden bg-[var(--color-primary-dark)]"
+      className="relative py-32 md:py-40 overflow-hidden bg-[var(--color-bg-soft)]"
       aria-labelledby="testimonials-heading"
     >
       <div className="container mx-auto max-w-4xl px-4 md:px-8">
@@ -46,7 +46,7 @@ export function TestimonialsAutoSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-sm font-semibold uppercase tracking-[0.25em] text-white/60 block mb-4">
+          <span className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-4">
             Our internship students
           </span>
           <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold tracking-tighter text-white">
@@ -56,7 +56,7 @@ export function TestimonialsAutoSection() {
 
         <motion.div
           layout
-          className="relative border-2 border-white/20 bg-white/5 backdrop-blur-sm p-8 md:p-12 min-h-[280px]"
+          className="relative border-2 border-[var(--color-accent)]/30 bg-white/5 backdrop-blur-sm p-8 md:p-12 min-h-[280px]"
         >
           <AnimatePresence mode="wait">
             <motion.blockquote
@@ -71,7 +71,7 @@ export function TestimonialsAutoSection() {
             </motion.blockquote>
           </AnimatePresence>
           <footer className="mt-8">
-            <cite className="not-italic font-bold text-white">
+            <cite className="not-italic font-bold text-[var(--color-accent)]">
               {testimonials[activeIndex].author}
             </cite>
             <span className="text-white/70">, {testimonials[activeIndex].org}</span>

@@ -59,7 +59,7 @@ export default function DashboardBlogPage() {
         breadcrumbs={[{ label: "Dashboard", href: "/dashboard" }, { label: "Blog" }]}
         variant="default"
       />
-      <section className="py-section sm:py-section-lg bg-[var(--color-primary-dark)]">
+      <section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer>
           <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
             <Link

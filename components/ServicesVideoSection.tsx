@@ -29,7 +29,7 @@ export function ServicesVideoSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-sm font-semibold uppercase tracking-[0.25em] text-white/60 block mb-4">
+          <span className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-4">
             Our approach
           </span>
           <h2 id="services-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white">
@@ -55,7 +55,7 @@ export function ServicesVideoSection() {
               >
                 <Link
                   href={`/${s.slug}`}
-                  className="group block relative overflow-hidden border-2 border-white/20 bg-white/5 hover:border-white/50 transition-all duration-500"
+                  className="group block relative overflow-hidden border-2 border-[var(--color-accent)]/30 bg-white/5 hover:border-[var(--color-accent)]/60 transition-all duration-500"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
@@ -68,7 +68,7 @@ export function ServicesVideoSection() {
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    <div className="absolute inset-0 bg-[var(--color-primary-dark)]/50 group-hover:bg-[var(--color-primary-dark)]/20 transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-[var(--color-bg-soft)]/50 group-hover:bg-[var(--color-bg-soft)]/20 transition-colors duration-500" />
                     {isHovered && (
                       <motion.div
                         className="absolute inset-0 flex items-center justify-center bg-black/30"
@@ -77,8 +77,8 @@ export function ServicesVideoSection() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <span className="w-16 h-16 rounded-full border-2 border-white/80 flex items-center justify-center text-white/90">
-                          <span className="w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[14px] border-l-white ml-1" />
+                        <span className="w-16 h-16 rounded-full border-2 border-[var(--color-accent)] flex items-center justify-center text-[var(--color-accent)]">
+                          <span className="w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[14px] border-l-[var(--color-accent)] ml-1" />
                         </span>
                       </motion.div>
                     )}
@@ -86,8 +86,8 @@ export function ServicesVideoSection() {
 
                   <div className="p-8 md:p-10">
                     <div className="mb-6 text-white/80 group-hover:text-[var(--color-accent)] transition-colors">
-                      <div className="bg-white/10 p-3 inline-block group-hover:bg-white/20 transition-all duration-300">
-                        <Icon className="w-6 h-6" />
+                      <div className="bg-[var(--color-accent)]/20 p-3 inline-block group-hover:bg-[var(--color-accent)]/30 transition-all duration-300">
+                        <Icon className="w-6 h-6 text-[var(--color-accent)]" />
                       </div>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">{s.title}</h3>
@@ -106,7 +106,7 @@ export function ServicesVideoSection() {
         </div>
       </div>
 
-      <div className="absolute top-20 right-0 w-72 h-72 border border-white/5 rounded-full pointer-events-none" aria-hidden />
+      <div className="absolute top-20 right-0 w-72 h-72 border border-[var(--color-accent)]/50 rounded-full pointer-events-none" aria-hidden />
     </section>
   );
 }
