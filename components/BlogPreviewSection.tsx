@@ -35,10 +35,10 @@ export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
           transition={{ duration: 0.6 }}
         >
           <div>
-            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-4">
+            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-white block mb-4">
               From the blog
             </span>
-            <h2 id="blog-heading" className="text-4xl md:text-5xl font-bold tracking-tighter text-white">
+            <h2 id="blog-heading" className="text-4xl md:text-5xl font-bold tracking-tighter text-[var(--color-accent)]">
               Our Latest Insights
             </h2>
           </div>
@@ -78,7 +78,7 @@ export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
                   {post.title}
                 </h3>
                 <p className="mt-2 text-white/70 line-clamp-2 text-sm">{post.excerpt}</p>
-                <time className="mt-4 block text-xs text-[var(--color-accent)]/90" dateTime={post.date}>
+                <time className="mt-4 block text-xs text-white/90" dateTime={post.date}>
                   {formatDate(post.date)}
                 </time>
               </Link>

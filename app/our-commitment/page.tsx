@@ -51,12 +51,12 @@ export default function OurCommitmentPage() {
                 className="text-center border border-white/10 bg-white/5 p-8 transition-colors duration-200 hover:border-white/20"
               >
                 <span
-                  className="inline-flex h-14 w-14 items-center justify-center border border-white/20 text-[var(--color-accent)] mb-6"
+                  className="inline-flex h-14 w-14 items-center justify-center border border-white/20 text-white mb-6"
                   aria-hidden="true"
                 >
                   <Icon size={28} strokeWidth={1.75} />
                 </span>
-                <h2 className="font-heading text-headline font-semibold text-[var(--color-accent)] mb-3 tracking-[0.02em]">
+                <h2 className="font-heading text-headline font-semibold text-white mb-3 tracking-[0.02em]">
                   {title}
                 </h2>
                 <p className="text-body-sm text-white/80 leading-relaxed max-w-[20ch] mx-auto">
@@ -69,7 +69,7 @@ export default function OurCommitmentPage() {
           {/* Main message – unchanged copy */}
           <div className="max-w-2xl mx-auto text-center space-y-10">
             <span
-              className="inline-flex h-14 w-14 items-center justify-center border border-white/20 text-[var(--color-accent)]"
+              className="inline-flex h-14 w-14 items-center justify-center border border-white/20 text-white"
               aria-hidden="true"
             >
               <Target size={32} strokeWidth={1.75} />

@@ -210,18 +210,18 @@ export function Contact({ showHeading = true }: ContactProps) {
         </motion.div>
 
         <motion.div
-          className="mt-16"
+          className="mt-16 max-w-4xl mx-auto text-center"
           initial={reducedMotion ? false : { opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+          <h3 className="text-lg font-semibold text-white mb-4 flex items-center justify-center gap-2">
             <MapPin className="h-5 w-5 text-[var(--color-accent)]" aria-hidden />
             Where we are
           </h3>
-          <div className="border border-white/10 overflow-hidden rounded-sm bg-white/5">
-            <div className="aspect-[16/10] min-h-[240px] w-full">
+          <div className="border border-white/10 overflow-hidden rounded-sm bg-white/5 w-full">
+            <div className="aspect-[16/9] min-h-[200px] w-full">
               {mapEmbedUrl ? (
                 <iframe
                   src={mapEmbedUrl}
@@ -232,7 +232,7 @@ export function Contact({ showHeading = true }: ContactProps) {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="European Era location map"
-                  className="w-full h-full min-h-[240px]"
+                  className="w-full h-full min-h-[200px]"
                 />
               ) : (
                 <iframe
@@ -242,12 +242,12 @@ export function Contact({ showHeading = true }: ContactProps) {
                   style={{ border: 0 }}
                   loading="lazy"
                   title="European Era location map"
-                  className="w-full h-full min-h-[240px]"
+                  className="w-full h-full min-h-[200px]"
                 />
               )}
             </div>
           </div>
-          <p className="mt-3 text-sm text-white/70">
+          <p className="mt-3 text-sm text-white/70 text-center">
             <a href={mapLink} target="_blank" rel="noopener noreferrer" className="text-[var(--color-accent)] hover:underline">
               Open in Google Maps
             </a>

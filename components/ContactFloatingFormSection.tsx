@@ -148,11 +148,11 @@ export function ContactFloatingFormSection() {
           transition={{ duration: 0.6 }}
         >
           <div>
-            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-4">
+            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-white block mb-4">
               Contact
             </span>
-            <h2 id="contact-heading" className="text-4xl md:text-5xl font-bold tracking-tighter text-white mb-8">
-              Let&apos;s Work <span className="text-[var(--color-accent)]">Together</span>
+            <h2 id="contact-heading" className="text-4xl md:text-5xl font-bold tracking-tighter text-[var(--color-accent)] mb-8">
+              Let&apos;s Work Together
             </h2>
             <p className="text-lg text-white/80 mb-12 max-w-md">
               Ready to start your mobility in Málaga? We&apos;ll support you from the first enquiry to the final evaluation.
@@ -182,7 +182,7 @@ export function ContactFloatingFormSection() {
           </div>
 
           <div className="border-2 border-[var(--color-accent)]/30 bg-white/5 backdrop-blur-sm p-8 md:p-10">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-[var(--color-accent)]/90 mb-8">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-white/90 mb-8">
               Send us a message
             </h3>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">

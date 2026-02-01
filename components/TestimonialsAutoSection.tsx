@@ -46,10 +46,10 @@ export function TestimonialsAutoSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-4">
+          <span className="text-sm font-semibold uppercase tracking-[0.25em] text-white block mb-4">
             Our internship students
           </span>
-          <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold tracking-tighter text-white">
+          <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold tracking-tighter text-[var(--color-accent)]">
             What Our Clients Say About Us
           </h2>
         </motion.div>

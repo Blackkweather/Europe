@@ -70,7 +70,7 @@ export function JourneySection() {
       <div className="container mx-auto max-w-6xl px-4 md:px-8 relative z-10">
         <motion.h2
           id="journey-heading"
-          className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] mb-4"
+          className="text-sm font-semibold uppercase tracking-[0.25em] text-white mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -78,7 +78,7 @@ export function JourneySection() {
           The Journey
         </motion.h2>
         <motion.p
-          className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-24 max-w-3xl"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-[var(--color-accent)] mb-24 max-w-3xl"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.05 }}

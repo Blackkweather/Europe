@@ -29,13 +29,13 @@ export function ServicesVideoSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-4">
+          <span className="text-sm font-semibold uppercase tracking-[0.25em] text-white block mb-4">
             Our approach
           </span>
-          <h2 id="services-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white">
+          <h2 id="services-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-[var(--color-accent)]">
             Our Services
           </h2>
-          <p className="mt-6 text-lg text-white/70 max-w-2xl">
+          <p className="mt-6 text-lg text-white/90 max-w-2xl">
             Erasmus+ student and staff mobilities in Málaga. We manage every detail so you can focus on learning.
           </p>
         </motion.div>
