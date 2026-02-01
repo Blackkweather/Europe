@@ -89,16 +89,16 @@ export function HeroVideoSection() {
           Erasmus+ · Málaga
         </motion.span>
         <motion.h1
-          className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] tracking-tighter text-white mb-8 max-w-5xl mx-auto"
+          className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] tracking-tighter text-[var(--color-accent)] mb-8 max-w-5xl mx-auto"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
           The New Era
           <br />
-          <span className="text-[var(--color-accent)]">In International</span>
+          <span className="text-white drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]">In International</span>
           <br />
-          Mobility
+          <span className="text-white drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]">Mobility</span>
         </motion.h1>
         <motion.p
           className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12"

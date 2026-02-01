@@ -20,7 +20,7 @@ export function ProcessSection() {
     <section
       id="process"
       className="py-24 relative overflow-hidden"
-      style={{ background: "#0a1628" }}
+      style={{ background: "var(--color-primary-dark)" }}
     >
       <div className="container mx-auto max-w-6xl px-4 md:px-8 relative z-10">
         <SectionHeader

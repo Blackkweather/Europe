@@ -19,7 +19,7 @@ export function ServicesVideoSection() {
     <section
       ref={ref}
       id="services"
-      className="relative py-32 md:py-40 overflow-hidden bg-[#0a1628]"
+      className="relative py-32 md:py-40 overflow-hidden bg-[var(--color-primary-dark)]"
       aria-labelledby="services-heading"
     >
       <div className="container mx-auto max-w-6xl px-4 md:px-8">

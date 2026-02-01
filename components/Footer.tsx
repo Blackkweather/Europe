@@ -109,13 +109,13 @@ export function Footer() {
             <ul className="space-y-2" role="list">
               {navLinks.map(({ href, label }) => (
                 <motion.li key={href} variants={reducedMotion ? undefined : itemVariants} transition={t}>
-                  <Link href={href} className="text-sm text-white/70 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-primary-dark)] py-0.5 w-fit block">
+                  <Link href={href} className="text-sm text-white/70 hover:text-[var(--color-accent)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-primary-dark)] py-0.5 w-fit block">
                     {label}
                   </Link>
                 </motion.li>
               ))}
               <motion.li variants={reducedMotion ? undefined : itemVariants} transition={t}>
-                <Link href="/login" className="text-sm text-white/70 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-primary-dark)] py-0.5 w-fit block">
+                <Link href="/login" className="text-sm text-white/70 hover:text-[var(--color-accent)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-primary-dark)] py-0.5 w-fit block">
                   Log in
                 </Link>
               </motion.li>

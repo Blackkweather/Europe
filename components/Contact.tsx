@@ -46,7 +46,7 @@ export function Contact({ showHeading = true }: ContactProps) {
   return (
     <section
       id="contact"
-      className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]"
+      className="pt-6 sm:pt-8 pb-section sm:pb-section-lg bg-[var(--color-bg-soft)]"
       aria-labelledby={showHeading ? "contact-heading" : undefined}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

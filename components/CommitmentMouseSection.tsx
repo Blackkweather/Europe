@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRef, useState, useCallback } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import { Info } from "lucide-react";
 
 export function CommitmentMouseSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -57,16 +58,13 @@ export function CommitmentMouseSection() {
           What we stand for
         </span>
         <motion.span
-          className="inline-flex h-12 w-12 items-center justify-center border-2 border-[var(--color-accent)] text-[var(--color-accent)] mb-8"
+          className="flex h-12 w-12 items-center justify-center border-2 border-[var(--color-accent)] text-[var(--color-accent)] mx-auto mb-8"
           aria-hidden
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M12 16v-4M12 8h.01" />
-          </svg>
+          <Info size={24} strokeWidth={2} />
         </motion.span>
-        <h2 id="commitment-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 tracking-tight">
-          Our <span className="text-[var(--color-accent)]">Commitment</span>
+        <h2 id="commitment-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 tracking-tight pb-2 inline-block border-b-2 border-[var(--color-accent)]">
+          Our Commitment
         </h2>
         <p className="text-lg md:text-xl text-white/85 leading-relaxed max-w-3xl mx-auto">
           We are committed to empowering personal growth and promoting{" "}

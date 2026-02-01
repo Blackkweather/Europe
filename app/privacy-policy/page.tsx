@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
         breadcrumbs={[{ label: "Privacy Policy" }]}
         variant="default"
       />
-      <section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
+      <section className="pt-6 sm:pt-8 pb-section sm:pb-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer narrow>
           <p className="text-white/90 mb-8 text-body-lg leading-relaxed">
             This page will contain the privacy policy for European Era. Content to be added.

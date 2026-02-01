@@ -4,9 +4,10 @@
 
 @layer base {
   :root {
-    --color-primary: #3C4895;
-    --color-primary-dark: #252d5c;
-    --color-bg-soft: #323d78;
+    /* Logo blue – clear blue (no purple tint) */
+    --color-primary: #1e4a8c;
+    --color-primary-dark: #0f2d52;
+    --color-bg-soft: #1a3d6d;
     --color-accent: #F5D000;
     --fab-safe: 5.5rem;
   }

@@ -136,7 +136,7 @@ export function ContactFloatingFormSection() {
   return (
     <section
       id="contact"
-      className="relative py-32 md:py-40 overflow-hidden bg-[#0a1628]"
+      className="relative py-32 md:py-40 overflow-hidden bg-[var(--color-primary-dark)]"
       aria-labelledby="contact-heading"
     >
       <div className="container mx-auto max-w-6xl px-4 md:px-8">

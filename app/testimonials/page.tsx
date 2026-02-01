@@ -24,7 +24,7 @@ export default function TestimonialsPage() {
         breadcrumbs={[{ label: "Testimonials" }]}
         variant="centered"
       />
-      <section className="py-section sm:py-section-lg bg-[var(--color-bg-soft)]">
+      <section className="pt-6 sm:pt-8 pb-section sm:pb-section-lg bg-[var(--color-bg-soft)]">
         <SectionContainer>
           <p
             className="text-sm font-semibold uppercase tracking-[0.18em] text-white/60 mb-12 text-center"

@@ -101,7 +101,7 @@ export function JourneySection() {
                 <span className="text-6xl md:text-7xl font-bold text-[var(--color-accent)]/70 block mb-4">
                   {chapter.number}
                 </span>
-                <h3 className="text-2xl md:text-3xl font-bold text-white">
+                <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-accent)]">
                   {chapter.title}
                 </h3>
                 <p className="text-white/70 mt-2 text-lg">

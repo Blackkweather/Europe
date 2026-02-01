@@ -24,7 +24,7 @@ export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
     <section
       ref={ref}
       id="blog"
-      className="relative py-32 md:py-40 overflow-hidden bg-[#0a1628]"
+      className="relative py-32 md:py-40 overflow-hidden bg-[var(--color-primary-dark)]"
       aria-labelledby="blog-heading"
     >
       <div className="container mx-auto max-w-6xl px-4 md:px-8">
