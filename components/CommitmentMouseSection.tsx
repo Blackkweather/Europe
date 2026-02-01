@@ -54,16 +54,16 @@ export function CommitmentMouseSection() {
       </motion.div>
 
       <div className="container mx-auto max-w-4xl px-4 md:px-8 relative z-10 text-center">
-        <span className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-6">
+        <span className="text-sm font-semibold uppercase tracking-[0.25em] text-white block mb-6">
           What we stand for
         </span>
         <motion.span
-          className="flex h-12 w-12 items-center justify-center border-2 border-[var(--color-accent)] text-[var(--color-accent)] mx-auto mb-8"
+          className="flex h-12 w-12 items-center justify-center border-2 border-white text-white mx-auto mb-8 [&_svg]:text-white"
           aria-hidden
         >
-          <Info size={24} strokeWidth={2} />
+          <Info size={24} strokeWidth={2} className="text-white" />
         </motion.span>
-        <h2 id="commitment-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 tracking-tight pb-2 inline-block border-b-2 border-[var(--color-accent)]">
+        <h2 id="commitment-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-accent)] mb-8 tracking-tight pb-2 inline-block border-b-2 border-white">
           Our Commitment
         </h2>
         <p className="text-lg md:text-xl text-white/85 leading-relaxed max-w-3xl mx-auto">

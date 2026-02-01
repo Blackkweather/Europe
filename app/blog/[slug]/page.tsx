@@ -36,18 +36,18 @@ function formatDate(dateStr: string) {
 function PostContent({ content }: { content: string }) {
   const paragraphs = content.trim().split("\n\n");
   return (
-    <div className="prose prose-invert max-w-none prose-headings:font-heading prose-headings:font-semibold prose-headings:text-white prose-headings:tracking-[0.02em] prose-p:text-white/90 prose-p:leading-relaxed prose-strong:text-[var(--color-accent)]">
+    <div className="article-content w-full text-left">
       {paragraphs.map((block, i) => {
         if (block.startsWith("## ")) {
           return (
-            <h2 key={i} className="font-heading text-headline mt-10 mb-4 text-white tracking-[0.02em]">
+            <h2 key={i} className="font-heading text-headline mt-10 mb-4 text-white tracking-[0.02em] text-left first:mt-0">
               {block.slice(3)}
             </h2>
           );
         }
         const parts = block.split(/(\*\*[^*]+\*\*)/g).filter(Boolean);
         return (
-          <p key={i} className="mb-6 text-body-lg text-white/90 leading-relaxed">
+          <p key={i} className="mb-6 text-body-lg text-white/90 leading-relaxed text-left max-w-none">
             {parts.map((part, j) => {
               if (part.startsWith("**") && part.endsWith("**")) {
                 return <strong key={j} className="text-[var(--color-accent)]">{part.slice(2, -2)}</strong>;
@@ -75,41 +75,47 @@ export default async function BlogPostPage({ params }: Props) {
         variant="default"
       />
       <section className="pt-6 sm:pt-8 pb-section sm:pb-section-lg bg-[var(--color-bg-soft)]">
-        <SectionContainer narrow>
-          <div className="flex flex-wrap items-center gap-4 text-sm text-white/60 mb-10">
-            <time dateTime={post.date} className="flex items-center gap-1.5">
-              <Calendar size={16} aria-hidden="true" />
-              {formatDate(post.date)}
-            </time>
-            {post.author && <span>{post.author}</span>}
-            {post.category && (
-              <span className="border border-white/20 px-3 py-0.5 text-[var(--color-accent)] font-medium text-sm">
-                {post.category}
-              </span>
+        <SectionContainer>
+          <article className="w-full max-w-3xl text-left">
+            <header className="mb-8">
+              <div className="flex flex-wrap items-center gap-4 text-sm text-white/60">
+                <time dateTime={post.date} className="flex items-center gap-1.5">
+                  <Calendar size={16} aria-hidden="true" />
+                  {formatDate(post.date)}
+                </time>
+                {post.author && <span>{post.author}</span>}
+                {post.category && (
+                  <span className="border border-white/20 px-3 py-0.5 text-[var(--color-accent)] font-medium text-sm">
+                    {post.category}
+                  </span>
+                )}
+              </div>
+            </header>
+            {post.image && (
+              <div className="relative aspect-video w-full overflow-hidden mb-10 border border-white/10 bg-white/5 rounded-sm">
+                <Image
+                  src={post.image}
+                  alt=""
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 672px"
+                />
+              </div>
             )}
-          </div>
-          {post.image && (
-            <div className="relative aspect-video overflow-hidden mb-12 border border-white/10 bg-white/5">
-              <Image
-                src={post.image}
-                alt=""
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, 672px"
-              />
+            <div className="w-full">
+              <PostContent content={post.content} />
             </div>
-          )}
-          <PostContent content={post.content} />
-          <p className="mt-12 pt-8 border-t border-white/10">
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-none"
-            >
-              <ArrowLeft size={18} aria-hidden="true" />
-              Back to Blog
-            </Link>
-          </p>
+            <footer className="mt-12 pt-8 border-t border-white/10">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-none"
+              >
+                <ArrowLeft size={18} aria-hidden="true" />
+                Back to Blog
+              </Link>
+            </footer>
+          </article>
         </SectionContainer>
       </section>
     </>
