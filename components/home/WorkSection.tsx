@@ -92,8 +92,8 @@ export function WorkSection({ posts }: WorkSectionProps) {
           ))}
         </div>
       </div>
-      <div className="absolute top-40 right-0 w-32 h-32 border border-white/10" aria-hidden />
-      <div className="absolute bottom-20 left-0 w-48 h-48 border border-white/5" aria-hidden />
+      <div className="absolute top-40 right-0 w-32 h-32 border border-white/10 hidden md:block" aria-hidden />
+      <div className="absolute bottom-20 left-0 w-48 h-48 border border-white/5 hidden md:block" aria-hidden />
     </section>
   );
 }

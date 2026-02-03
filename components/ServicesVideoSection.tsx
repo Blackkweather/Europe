@@ -106,7 +106,7 @@ export function ServicesVideoSection() {
         </div>
       </div>
 
-      <div className="absolute top-20 right-0 w-72 h-72 border border-[var(--color-accent)]/50 rounded-full pointer-events-none" aria-hidden />
+      <div className="absolute top-20 right-0 w-72 h-72 border border-[var(--color-accent)]/50 rounded-full pointer-events-none hidden md:block" aria-hidden />
     </section>
   );
 }

@@ -67,8 +67,8 @@ export function FeaturesSection() {
           })}
         </motion.div>
       </div>
-      <div className="absolute top-20 right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl" aria-hidden />
-      <div className="absolute bottom-20 left-10 w-60 h-60 bg-white/[0.03] rounded-full blur-3xl" aria-hidden />
+      <div className="absolute top-20 right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl hidden md:block" aria-hidden />
+      <div className="absolute bottom-20 left-10 w-60 h-60 bg-white/[0.03] rounded-full blur-3xl hidden md:block" aria-hidden />
     </section>
   );
 }

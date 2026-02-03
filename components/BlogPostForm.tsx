@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import type { BlogPost } from "@/lib/blog-data";
+import { DatePicker } from "@/components/ui/DatePicker";
 
 const schema = z.object({
   title: z.string().min(1, "Title is required"),
@@ -166,11 +167,12 @@ export function BlogPostForm({
           <label htmlFor="blog-date" className="block text-sm font-medium text-white/80 mb-2">
             Date *
           </label>
-          <input
+          <DatePicker
             id="blog-date"
-            type="date"
-            {...register("date")}
-            className="w-full border border-white/20 bg-white/5 px-4 py-3 text-white placeholder:text-white/50 focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 focus:outline-none min-h-[48px]"
+            value={watch("date") ?? ""}
+            onChange={(v) => setValue("date", v)}
+            placeholder="Select date"
+            required
           />
           {errors.date && (
             <p className="mt-1.5 text-sm text-red-300" role="alert">

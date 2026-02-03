@@ -125,14 +125,14 @@ export function JourneySection() {
         </div>
       </div>
 
-      {/* Floating parallax shapes – light yellow borders */}
+      {/* Floating parallax shapes – hidden on phone for cleaner layout */}
       <div
-        className="absolute top-1/4 right-10 w-64 h-64 border-2 rounded-full pointer-events-none"
+        className="absolute top-1/4 right-10 w-64 h-64 border-2 rounded-full pointer-events-none hidden md:block"
         style={{ borderColor: "rgba(245, 208, 0, 0.5)" }}
         aria-hidden
       />
       <div
-        className="absolute bottom-1/3 left-10 w-40 h-40 border-2 pointer-events-none"
+        className="absolute bottom-1/3 left-10 w-40 h-40 border-2 pointer-events-none hidden md:block"
         style={{ borderColor: "rgba(245, 208, 0, 0.5)" }}
         aria-hidden
       />

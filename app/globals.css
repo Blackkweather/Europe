@@ -205,3 +205,61 @@ html.scrollbar-dark::-webkit-scrollbar-thumb {
 html.scrollbar-dark::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.35);
 }
+
+/* Date picker – theme to match dashboard (dark blue, accent yellow) */
+.rdp-root.rdp-theme-dashboard {
+  --rdp-accent-color: var(--color-accent);
+  --rdp-accent-background-color: rgba(245, 208, 0, 0.2);
+  --rdp-day_button-border-radius: 0;
+  --rdp-today-color: var(--color-accent);
+  --rdp-selected-border: 2px solid var(--color-accent);
+  color: rgba(255, 255, 255, 0.95);
+}
+.rdp-root.rdp-theme-dashboard .rdp-day_button {
+  color: inherit;
+}
+.rdp-root.rdp-theme-dashboard .rdp-day_button:hover:not([data-disabled]):not([data-selected]) {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+.rdp-root.rdp-theme-dashboard .rdp-day_button[data-selected] {
+  background: var(--color-accent);
+  color: #0f2d52;
+}
+.rdp-root.rdp-theme-dashboard .rdp-day_button[data-today]:not([data-selected]) {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.rdp-root.rdp-theme-dashboard .rdp-chevron {
+  fill: rgba(255, 255, 255, 0.8);
+}
+.rdp-root.rdp-theme-dashboard .rdp-chevron:hover {
+  fill: var(--color-accent);
+}
+.rdp-root.rdp-theme-dashboard .rdp-caption_label,
+.rdp-root.rdp-theme-dashboard .rdp-weekday {
+  color: rgba(255, 255, 255, 0.85);
+}
+.rdp-root.rdp-theme-dashboard .rdp-day[data-outside] .rdp-day_button {
+  color: rgba(255, 255, 255, 0.4);
+}
+.rdp-root.rdp-theme-dashboard .rdp-day[data-disabled] .rdp-day_button {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 0.6;
+}
+.rdp-root.rdp-theme-dashboard .rdp-nav {
+  gap: 0.25rem;
+}
+.rdp-root.rdp-theme-dashboard .rdp-button_previous,
+.rdp-root.rdp-theme-dashboard .rdp-button_next {
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0;
+}
+.rdp-root.rdp-theme-dashboard .rdp-button_previous:hover:not([aria-disabled="true"]),
+.rdp-root.rdp-theme-dashboard .rdp-button_next:hover:not([aria-disabled="true"]) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}

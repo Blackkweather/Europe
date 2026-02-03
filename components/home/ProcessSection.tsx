@@ -95,8 +95,8 @@ export function ProcessSection() {
           })}
         </div>
       </div>
-      <div className="absolute top-40 right-20 w-32 h-32 border border-[var(--color-accent)]/30" aria-hidden />
-      <div className="absolute bottom-60 left-20 w-40 h-40 border border-[var(--color-accent)]/20" aria-hidden />
+      <div className="absolute top-40 right-20 w-32 h-32 border border-[var(--color-accent)]/30 hidden md:block" aria-hidden />
+      <div className="absolute bottom-60 left-20 w-40 h-40 border border-[var(--color-accent)]/20 hidden md:block" aria-hidden />
     </section>
   );
 }

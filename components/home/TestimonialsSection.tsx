@@ -87,8 +87,8 @@ export function TestimonialsSection() {
           </motion.div>
         </div>
       </div>
-      <div className="absolute top-40 right-20 w-56 h-56 border border-white/5" aria-hidden />
-      <div className="absolute bottom-20 left-10 w-32 h-32 border-2 border-white/10" aria-hidden />
+      <div className="absolute top-40 right-20 w-56 h-56 border border-white/5 hidden md:block" aria-hidden />
+      <div className="absolute bottom-20 left-10 w-32 h-32 border-2 border-white/10 hidden md:block" aria-hidden />
     </section>
   );
 }

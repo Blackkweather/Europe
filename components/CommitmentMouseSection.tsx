@@ -82,8 +82,8 @@ export function CommitmentMouseSection() {
         </Link>
       </div>
 
-      <div className="absolute bottom-20 left-1/4 w-48 h-48 border border-[var(--color-accent)]/50 pointer-events-none" aria-hidden />
-      <div className="absolute top-1/3 right-1/4 w-32 h-32 border border-[var(--color-accent)]/50 rounded-full pointer-events-none" aria-hidden />
+      <div className="absolute bottom-20 left-1/4 w-48 h-48 border border-[var(--color-accent)]/50 pointer-events-none hidden md:block" aria-hidden />
+      <div className="absolute top-1/3 right-1/4 w-32 h-32 border border-[var(--color-accent)]/50 rounded-full pointer-events-none hidden md:block" aria-hidden />
     </section>
   );
 }
